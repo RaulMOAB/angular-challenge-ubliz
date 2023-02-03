@@ -16,7 +16,7 @@
             type="button"
             label="Remove"
             [disabled]="state.busy"
-            (click)="onRemove(state.bookList)"
+            (click)="onRemove(state.bookList.length - 1)"
             class="p-button-danger button"
           ></button>
     </p-fieldset>

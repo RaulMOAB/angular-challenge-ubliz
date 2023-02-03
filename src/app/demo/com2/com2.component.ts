@@ -17,11 +17,12 @@ export class Com2Component implements OnInit, OnDestroy {
   errorMessage;
   errorDetail;
 
-  @Select(BookState) state$: Observable<BookStateModel>;//?
+  //Portion of stage
+  @Select(BookState) state$: Observable<BookStateModel>;
   _state: Subscription;
 
   constructor(
-    private store: Store //?
+    private store: Store 
   ) { }
 
   ngOnInit() {
@@ -42,8 +43,8 @@ export class Com2Component implements OnInit, OnDestroy {
     this._state.unsubscribe();
   }
 
-  onRemove(books){
-    Remove.dispatch(this.store, {bookList:books})
+  onRemove(book){
+    Remove.dispatch(this.store, {bookList:book})
     console.log(this.store);
   }
 }
