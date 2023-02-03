@@ -1,21 +1,23 @@
-<div *ngIf="state$ | async as state">   
-    <table >
-        <tr>
-            <td>Code</td>
-            <td>Name</td>
-        </tr>
-        <tr *ngFor="let book of state.bookList">
-            <td>{{book.code}}</td>
-            <td>{{book.name}}</td>
-        </tr>
-    </table>
-    <button
-        pButton
-        pRipple
-        type="button"
-        label="Remove"
-        [disabled]="state.busy"
-        (click)="onRemove(state.bookList)"
-        class="p-button-danger"
-      ></button>
+<div *ngIf="state$ | async as state" class="container">   
+    <p-fieldset legend="Componente 2">
+        <table >
+            <tr>
+                <td>Code</td>
+                <td>Name</td>
+            </tr>
+            <tr *ngFor="let book of state.bookList">
+                <td>{{book.code}}</td>
+                <td>{{book.name}}</td>
+            </tr>
+        </table>
+        <button
+            pButton
+            pRipple
+            type="button"
+            label="Remove"
+            [disabled]="state.busy"
+            (click)="onRemove(state.bookList)"
+            class="p-button-danger button"
+          ></button>
+    </p-fieldset>
 </div>
