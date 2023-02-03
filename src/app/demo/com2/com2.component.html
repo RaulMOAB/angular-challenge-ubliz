@@ -1,0 +1,3 @@
+<div *ngIf="state$ | async as state">
+    <p *ngFor="let book of state.bookList">{{book.name}}</p>
+</div>

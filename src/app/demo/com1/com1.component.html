@@ -1,0 +1,42 @@
+<div *ngIf="state$ | async as state">
+  <p-messages
+    *ngIf="state.error"
+    [(value)]="errorMessage"
+    [enableService]="false"
+  ></p-messages>
+  <p-fieldset legend="Componente 1">
+    <div class="badge">
+      <p-badge
+        [value]="state.count"
+        size="xlarge"
+        severity="success"
+        styleClass="p-mr-2"
+      ></p-badge>
+    </div>
+    <p-checkbox
+      name="fail"
+      label="Fail"
+      [(ngModel)]="fail"
+      [binary]="true"
+    ></p-checkbox>
+    <div class="buttons">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Add"
+        [disabled]="state.busy"
+        (click)="onAdd()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Substract"
+        [disabled]="state.busy"
+        (click)="onSubstract()"
+        class="p-button-danger"
+      ></button>
+    </div>
+  </p-fieldset>
+</div>
