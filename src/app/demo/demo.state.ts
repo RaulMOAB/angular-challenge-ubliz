@@ -2,7 +2,7 @@ import { Action, State, StateContext, Store } from "@ngxs/store";
 import produce from "immer";
 import { BaseStateModel, observeAction } from "../state";
 import { of } from "rxjs";
-import { delay, tap } from "rxjs/operators";
+import { count, delay, tap } from "rxjs/operators";
 import { Injectable } from "@angular/core";
 import { DemoService } from "./demo.service";
 

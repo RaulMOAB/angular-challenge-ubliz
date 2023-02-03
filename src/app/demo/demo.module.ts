@@ -14,9 +14,12 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { BadgeModule } from 'primeng/badge';
 import { FieldsetModule } from 'primeng/fieldset';
+
+
 import { Com2Component } from './com2/com2.component';
 import { BookState } from './book.state';
 import { BookService } from './book.service';
+
 
 @NgModule({
 
@@ -33,7 +36,8 @@ import { BookService } from './book.service';
     CheckboxModule,
     ButtonModule,
     BadgeModule,
-    FieldsetModule
+    FieldsetModule,
+    
   ],
 
   declarations: [

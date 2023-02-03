@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { Observable, Subscription } from 'rxjs';
-import { BookState, BookStateModel } from '../book.state';
+import { BookState, BookStateModel, Remove } from '../book.state';
 import { Find } from '../book.state';
 
 
@@ -40,6 +40,11 @@ export class Com2Component implements OnInit, OnDestroy {
 
   ngOnDestroy(){
     this._state.unsubscribe();
+  }
+
+  onRemove(books){
+    Remove.dispatch(this.store, {bookList:books})
+    console.log(this.store);
   }
 }
 
