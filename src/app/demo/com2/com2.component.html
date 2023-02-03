@@ -1,9 +1,9 @@
 <div *ngIf="state$ | async as state" class="container">   
     <p-fieldset legend="Componente 2">
-        <table >
+        <table>
             <tr>
-                <td>Code</td>
-                <td>Name</td>
+                <th>Code</th>
+                <th>Name</th>
             </tr>
             <tr *ngFor="let book of state.bookList">
                 <td>{{book.code}}</td>
