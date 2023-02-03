@@ -67,7 +67,7 @@ export class BookState {
         tap(() =>
          ctx.setState(
           produce((bookStateModel: BookStateModel) => {              
-            bookStateModel.bookList.splice(1,1);
+            bookStateModel.bookList.splice(-1,1);
           })
          ))
       )    
