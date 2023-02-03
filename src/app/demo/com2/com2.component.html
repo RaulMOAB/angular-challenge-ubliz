@@ -18,6 +18,7 @@
             [disabled]="state.busy"
             (click)="onRemove(state.bookList.length -1)"
             class="p-button-danger button"
+            pTooltip="{{state.bookList.length}} restantes"
           ></button>
     </p-fieldset>
 </div>

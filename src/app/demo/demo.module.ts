@@ -14,6 +14,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { BadgeModule } from 'primeng/badge';
 import { FieldsetModule } from 'primeng/fieldset';
+import {TooltipModule} from 'primeng/tooltip';
 
 
 import { Com2Component } from './com2/com2.component';
@@ -37,7 +38,7 @@ import { BookService } from './book.service';
     ButtonModule,
     BadgeModule,
     FieldsetModule,
-    
+    TooltipModule
   ],
 
   declarations: [
