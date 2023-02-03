@@ -17,7 +17,7 @@ export class Com2Component implements OnInit, OnDestroy {
   errorMessage;
   errorDetail;
 
-  @Select(BookState) state$: Observable<BookStateModel>;//?
+  @Select(BookState) state$: Observable<BookStateModel>;
   _state: Subscription;
 
   constructor(
@@ -42,9 +42,8 @@ export class Com2Component implements OnInit, OnDestroy {
     this._state.unsubscribe();
   }
 
-  onRemove(books){
-    Remove.dispatch(this.store, {bookList:books})
-    console.log(this.store);
+  onRemove(book){
+    Remove.dispatch(this.store, {bookList:book})
   }
 }
 

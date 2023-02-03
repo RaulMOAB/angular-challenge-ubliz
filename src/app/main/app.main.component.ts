@@ -21,6 +21,11 @@ export class AppMainComponent {
         label: 'Componente 1',
         icon:'pi pi-fw pi-pencil',
         routerLink: ['/demo/com1']
+      },
+      {
+        label: 'Componente 2',
+        icon:'pi pi-fw pi-pencil',
+        routerLink: ['/demo/com2']
       }
     ];
   }
