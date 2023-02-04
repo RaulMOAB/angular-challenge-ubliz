@@ -4,7 +4,6 @@ import { BaseStateModel, observeAction } from "../state";
 import { of } from "rxjs";
 import { tap } from "rxjs/operators";
 import { Injectable } from "@angular/core";
-import { Book } from "../core/models/book.model";
 import { BookService } from "./book.service";
 
 
@@ -16,7 +15,7 @@ export const ACTION_PREFIX = "[Book]";
 
 export type BookActionParams = { bookList:[]; fail?: boolean };
 
-//Creating an action
+
 export class Find{
   public static readonly type = `${ACTION_PREFIX} Find`;
   constructor(){}
@@ -39,7 +38,7 @@ export class Remove{
 export class BookState {
   constructor(private bookService: BookService) {}
   
-  //Action set a bookList to state
+
   @Action(Find)
   find(ctx: StateContext<BookStateModel>, action: Find){
     return observeAction(

@@ -21,7 +21,7 @@ export class Com2Component implements OnInit, OnDestroy {
   _state: Subscription;
 
   constructor(
-    private store: Store //?
+    private store: Store 
   ) { }
 
   ngOnInit() {

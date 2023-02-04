@@ -10,6 +10,9 @@
                 <td>{{book.name}}</td>
             </tr>
         </table>
+        <p *ngIf="state.bookList.length === 0">
+          No hay elementos en la tabla
+        </p>
         <button
             pButton
             pRipple
