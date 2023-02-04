@@ -7,7 +7,7 @@ import { Book } from '../core/models/book.model';
 })
 export class BookService {
   //Call to a DB or Api
-  findBooks(): Observable<Book[]>{//returns and observable list of books, type Book[]
+  findBooks(): Observable<Book[]>{
     return of([
       {
         code: "123123123",
